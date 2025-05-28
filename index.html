@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url('https://img.freepik.com/premium-vector/smart-city-concepts_46706-682.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00d8ff;
+      text-shadow: 0 2px 8px rgba(0, 216, 255, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #bbb;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 50px;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .assignments-heading {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 40px 20px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 40px auto;
+      max-width: 1200px;
+      width: 90%;
+      background: rgba(20, 30, 48, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      padding: 40px 30px;
+      gap: 40px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: fadeIn 1s ease;
+    }
+
+    .profile-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    }
+
+    .profile-text {
+      flex: 1;
+      min-width: 280px;
+      color: #fff;
+    }
+
+    .profile-text h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #00d8ff;
+      text-shadow: 0 2px 8px rgba(0, 216, 255, 0.3);
+    }
+
+    .profile-text p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.7;
+    }
+
+    .profile-image {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-image img {
+      width: 450px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #00d8ff;
+      background: #fff;
+      box-shadow: 0 4px 30px rgba(0, 216, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #00d8ff;
+      transform: scale(1.2);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none; 
+        padding: 20px;
+        z-index: 99;
+      }
+
+      nav.active {
+        display: flex; 
+      }
+
+      header {
+        position: relative;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .profile-text {
+        text-align: center;
+      }
+
+      .profile-image img {
+        width: 1000px;
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SynxTech</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="HTML/Lecture.html">Lecture</a>
+      <a href="HTML/Activities.html">Activities</a>
+      <a href="HTML/Quiz.html">Quiz</a>
+      <a href="HTML/Exam.html">Exams</a>
+    </nav>
+  </header>
+
+  <h1 class="assignments-heading">Welcome to my Portfolio</h1>
+
+  <div class="profile-section">
+    <div class="profile-text">
+      <h2>Hi! I’m RJ</h2>
+      <p>
+        Welcome to my portfolio! I’m Ronald M. Jimenez Jr., currently 2nd year college taking up Bachelor of Science at University of the East Manila under the College of Computer Studies and Systems. Explore my outputs here on this site!
+      </p>
+
+      <br>
+      <br>
+      <br>
+
+      <h2>Skills</h2>
+      <p>
+        &nbsp; &nbsp; &nbsp; &nbsp;I have substantial HTML experience, allowing me to develop well-structured, semantic, and easily accessible web pages that improve usability and readability. 
+        My CSS experience allows me to create visually appealing and responsive web interfaces that work effortlessly across multiple devices. I also have a strong foundation in C++, allowing me to develop interactive and efficient systems. 
+        In addition, my Python knowledge enables me to create dynamic and reusable modules, which improves software development efficiency and scalability.
+      </p>
+    </div>
+
+    <div class="profile-image">
+      <img src="gradpic-removebg-preview.png" alt="Portrait of RJ" />
+      <div class="social-icons">
+        <a href="https://www.facebook.com/ronaldjimenez123/" target="_blank" title="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/theycalllme._rj/" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://mail.google.com/mail" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active'); 
+    }
+  </script>
+</body>
+</html>
