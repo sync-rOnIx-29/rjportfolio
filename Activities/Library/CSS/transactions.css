@@ -1,0 +1,75 @@
+body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h4 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .table-header {
+      background-color: #cc0000;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .borrow-table th,
+    .borrow-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .borrow-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 3rem;
+      background: white;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .status {
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      color: white;
+      display: inline-block;
+      font-size: 0.875rem;
+    }
+    .btn-outline-danger {
+  color: #cc0000;
+  border-color: #cc0000;
+}
+
+.btn-outline-danger:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+    .status.borrowed {
+      background-color: #cc0000;
+    }
+
+    .status.returned {
+      background-color: #28a745;
+    }
+
+    .status.overdue {
+      background-color: #dc3545;
+    }
+
+    .chart-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 15px rgba(204, 0, 0, 0.15);
+    }

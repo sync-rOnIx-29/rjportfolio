@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyWebsite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        .logo {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        body {
+            background-color: #f0f8ff; 
+            color: #4c7dae; 
+            line-height: 1.6;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #d6d0f7;
+            color: #000000; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 10%; 
+            overflow: hidden; 
+        }
+
+        nav {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000; 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4169E1; 
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff; 
+            background: #4682B4; 
+            box-shadow: 0 0 10px rgba(70, 130, 180, 0.5);
+        }
+
+        .detel {
+            text-align: left;
+            max-width: 50%; 
+            padding: 20px;
+        }
+
+        .detel h1 {
+            font-size: 56px;
+            color: #4169E1; 
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .detel h1 span {
+            color: #4682B4; 
+        }
+
+        .detel p {
+            color: #333; 
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .images {
+            position: relative; 
+            width: 40%; 
+            text-align: center;
+        }
+
+        .images img {
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px; 
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 100px 50px; /* Increased padding for better spacing */
+            text-align: center;
+        }
+
+        #about, #skills, #contact {
+            background: #E6E6FA; 
+            color: #333;
+        } 
+
+        #about h2, #skills h2, #contact h2 {
+            font-size: 40px;
+            color: #4169E1; 
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        #about p, #contact p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        #contact {
+            text-align: center;
+            padding: 60px 50px;
+            background: #f9f9f9; /* Light background */
+        }
+
+        #contact h2 {
+            font-size: 36px;
+            color: #0D3B66; /* Dark blue */
+            margin-bottom: 30px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-box {
+            background: #f8f8f8;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-box i {
+            font-size: 36px;
+            color: #FF007F; 
+            margin-bottom: 10px;
+        }
+
+        .contact-box h3 {
+            font-size: 20px;
+            color: #0D3B66;
+            margin-bottom: 5px;
+        }
+
+        .contact-box p {
+            font-size: 16px;
+            color: #333;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <div class="logo">RJ</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li> 
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="detel" id="home">
+            <h1>I'm Ronald <span>Jimenez</span></h1>
+            <p>This is my personal portfolio or online biography. 
+                <br> I created this to showcase all my details and experiences.
+            </p>
+        </div>
+        <div class="images">
+            <img src="d41fb60c-9c3d-421b-b119-b9464d9407d0.jpg" class="me" alt="Profile picture of RJ Jimenez">
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Ronald M. Jimenez Jr., born in Nueva Ecija, but now staying in Malabon City. I am taking a Bachelor of Science in Computer Science at the University of the East Manila Campus. with my strong passion for technology. 
+            i have long been interested in the way technology constantly changes and shapes the manner in which we live, work and interact.
+        </p>
+        <br>
+        <p>Apart from my studies, I also have a keen interest in sports and entertainment, which help me maintain a well-balanced lifestyle. Playing sports like volleyball and badminton keeps me 
+            active and disciplined, while watching movies allows me to explore different cultures, perspectives, and storytelling techniques.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>As a student programmer</h3>
+        <p>I have substantial HTML experience, allowing me to develop well-structured, semantic, and easily accessible web pages that improve usability and readability.   My CSS experience allows me to create visually appealing and responsive web interfaces that work effortlessly across multiple devices.   
+            I also have a strong foundation in C++, allowing me to develop interactive and efficient systems.  
+            In addition, my Python knowledge enables me to create dynamic and reusable modules, which improves software development efficiency and scalability.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Manila, Philippines</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p>+63976-418-1770</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Address</h3>
+                <p>jimenez.ronaldjr@ue.edu.ph</p>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>

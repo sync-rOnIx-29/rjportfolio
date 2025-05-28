@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/report.css">
+</head>
+<body>
+
+    <div class="container">
+    <h1 class="mb-4">Reports Module</h1>
+
+    <div class="container">
+    <div class="top-actions">
+      <a href="../FinalsACT2.html" class="btn btn-outline-danger">← Back to Dashboard</a>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header">Summary Report</div>
+      <div class="card-body">
+        <ul>
+          <li>Total Books Borrowed: <span id="totalBooks">0</span></li>
+          <li>Total Unique Borrowers: <span id="totalBorrowers">0</span></li>
+          <li>Books Borrowed Today: <span id="borrowedToday">0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header">Recent Activities</div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Activity</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="recentActivities">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Generate Custom Reports</div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="startDate" class="form-label">Start Date</label>
+              <input type="date" id="startDate" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label for="endDate" class="form-label">End Date</label>
+              <input type="date" id="endDate" class="form-control">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Generate Report</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+
+      const totalBooks = transactions.length;
+      const uniqueBorrowers = new Set(transactions.map(t => t.borrower)).size;
+
+      const today = new Date().toISOString().split('T')[0];
+      const borrowedToday = transactions.filter(t => t.date === today).length;
+
+      document.getElementById('totalBooks').textContent = totalBooks;
+      document.getElementById('totalBorrowers').textContent = uniqueBorrowers;
+      document.getElementById('borrowedToday').textContent = borrowedToday;
+
+      const activityList = document.getElementById('recentActivities');
+      const recent = transactions.slice(-5).reverse();
+
+      recent.forEach((t, i) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${i + 1}</td>
+          <td>Book "<strong>${t.title}</strong>" borrowed by <strong>${t.borrower}</strong></td>
+          <td>${t.date}</td>
+        `;
+        activityList.appendChild(row);
+      });
+    });
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

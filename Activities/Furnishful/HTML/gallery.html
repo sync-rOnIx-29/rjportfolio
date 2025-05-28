@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3b3939;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            color: #333;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 254, 254, 0.7);
+            box-shadow: 0 4px 8px rgba(253, 251, 251, 0.1);
+            width: 100%;
+        }
+        .logo {
+            margin-left: 80px;
+            font-weight: bold;
+            font-family: Helvetica;
+            font-size: 30px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            background: darkgreen;
+            color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 14px;
+            color: #555;
+        }
+        .category {
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .buy-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: darkgreen;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .h1 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Furniture Finds</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/Furnishful/index.html">Home</a></li>
+                <li><a href="/Furnishful/HTML/category.html">Category</a></li>
+                <li><a href="/Furnishful/HTML/gallery.html">Gallery</a></li>
+                <li><a href="/Furnishful/HTML/description.html">Description</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="h1">Our Products</h1>
+    <div class="container">
+        <div class="product">
+            <img src="/Furnishful/IMAGES/g1.avif" alt="Product 1">
+            <h2>TOSSBERG Chair</h2>
+            <p>A stable chair made for those lovely dinners with family and friends. Covered with a durable fabric where the soft padding and lumbar support make you sit comfortably – for long periods.</p>
+            <p class="price">₱3,000.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+        <div class="product">
+            <img src="/Furnishful/IMAGES/g2.avif" alt="Product 2">
+            <h2>GRÖNSTA Armchair, in/outdoor</h2>
+            <p>The molded seat shell with smooth curved shapes and cocooning armrests is designed for comfort and lasting beauty. Fingerprints, spills and other mishaps on the white surface wipe clean easily.</p>
+            <p class="price">₱3,400.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+        <div class="product">
+            <img src="/Furnishful/IMAGES/elegantdining.avif" alt="Product 3">
+            <h2>TVARÖ</h2>
+            <p>5-seat furniture set, outdoor, brown/Frösön/Duvholmen beige</p>
+            <p class="price">₱8,600.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+        <div class="product">
+            <img src="/Furnishful/IMAGES/g4.avif" alt="Product 4">
+            <h2>LINNEBÄCK Chair</h2>
+            <p>Beautiful simplicity and a casual style. This flexible, versatile easy chair with an airy design adds a visual calmness to the room, while supporting both an active and a relaxed life at home.</p>
+            <p class="price">₱6,600.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+        <div class="product">
+            <img src="/Furnishful/IMAGES/chair1.jpg" alt="Product 5">
+            <h2>GRÖNSTA Chair, indoor/outdoor</h2>
+            <p>The molded seat shell with smooth curved shapes is especially designed for comfort and lasting beauty. Fingerprints, spills and other mishaps on the grey-turquoise surface wipe clean easily.</p>
+            <p class="price">₱900.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+        <div class="product">
+            <img src="/Furnishful/IMAGES/g6.avif" alt="Product 6">
+            <h2>BINGSTA Armchair</h2>
+            <p>With its curved and embracing back panel, BINGSTA armchair allows you to have well-needed me time in a private nook – even in open-plan environments.</p>
+            <p class="price">₱13,000.00</p>
+            <a href="/Furnishful/HTML/thankyou.html" class="buy-button">BUY NOW!</a>
+        </div>
+
+    </div>
+</body>
+</html>

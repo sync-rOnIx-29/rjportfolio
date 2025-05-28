@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3b3939;
+            text-align: center;
+        }
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .navbar ul li a:hover {
+            color: rgb(47, 243, 106);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            padding: 30px;
+            margin: 20px;
+            background-color: rgb(229, 231, 230);
+            justify-content: center;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            flex: 1;
+            min-width: 350px;
+            max-width: 400px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-details {
+            flex: 2;
+            padding: 20px;
+            text-align: left;
+            max-width: 500px;
+        }
+        .add-to-cart {
+            margin-top: 20px;
+            border: none;
+            padding: 15px;
+            background-color: green;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: rgb(186, 226, 184);
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .h2 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Furniture Finds</h1>
+        <ul>
+            <li><a href="/Furnishful/index.html">Home</a></li>
+            <li><a href="/Furnishful/HTML/category.html">Category</a></li>
+            <li><a href="/Furnishful/HTML/gallery.html">Gallery</a></li>
+            <li><a href="/Furnishful/HTML/description.html">Description</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2 class="h2">Product Details</h2>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="/Furnishful/IMAGES/dtable3.webp" alt="Dining Table Set">
+            </div>
+            <div class="product-details">
+                <p>This elegant modern dining set features a luxurious marble-style tabletop with a gold-accented base, paired with six stylish and comfortable chairs. The muted green upholstery and textured backrest design create a sophisticated yet cozy ambiance, perfect for family gatherings and special occasions. Designed with durability and aesthetics in mind, this set is a perfect blend of functionality and contemporary elegance.</p>
+                <p><strong>Dining Table</strong></p>
+                <p>Length: 160 cm – 200 cm (63 in – 79 in)</p>
+                <p>Width: 80 cm – 100 cm (31.5 in – 39.5 in)</p>
+                <p>Height: 75 cm (29.5 in)</p>
+                <p><strong>Chairs</strong></p>
+                <p>Seat Height: 45 cm (17.7 in)</p>
+                <p>Overall Height: 85 cm – 95 cm (33.5 in – 37.4 in)</p>
+                <p>Width: 50 cm – 55 cm (19.7 in – 21.6 in)</p>
+                <p><strong>Price:</strong> ₱ 1,500.00</p>
+                <a href="/Furnishful/HTML/thankyou.html" class="add-to-cart">BUY NOW!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

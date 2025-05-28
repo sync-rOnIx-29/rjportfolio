@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3b3939;
+            text-align: center;
+        }
+        .navbar {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+        .navbar h1 {
+            margin: 0;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .navbar ul li a:hover {
+            color: green;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .category {
+            margin: 20px 0;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .buy-button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .h2 {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Furniture Finds</h1>
+        <ul>
+            <li><a href="/Furnishful/index.html">Home</a></li>
+            <li><a href="/Furnishful/HTML/category.html">Category</a></li>
+            <li><a href="/Furnishful/HTML/gallery.html">Gallery</a></li>
+            <li><a href="/Furnishful/HTML/description.html">Description</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <div class="category">
+            <h2 class="h2">Chairs</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/chair1.jpg" alt="chair1">
+                    <h3>Iron Makeup Stool </h3>
+                    <p>Curved backrest and armrests, provides unparalleled relaxation, making every moment a retreat.</p>
+                    <p><strong>₱2,000.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/chair2.webp" alt="chair2">
+                    <h3>Bunny Easy Chair</h3>
+                    <p>Foldable lightweight chair that you can bring anywhere.</p>
+                    <p><strong>₱1,000.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/chair3.jpg" alt="Chair3">
+                    <h3>Sidney Dining Chair</h3>
+                    <p>Sleek bentwood wrap around dining chair upholstered in fabric.</p>
+                    <p><strong>₱1,500.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2 class="h2">Sofa Beds</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="sofabed1.png" alt="sofbed1">
+                    <h3>Sofa Bed</h3>
+                    <p>For a condo unit with limited space, this multifunction furniture.</p>
+                    <p><strong>₱22,500.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="sofabed2.webp" alt="sofabed2">
+                    <h3>Grey Sofa Bed 1 seater</h3>
+                    <p>Inclining Positions, Luxury Sofa Bed for Living Room.</p>
+                    <p><strong>₱10,000.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="sofabed3.jpeg" alt="sofabed3">
+                    <h3>BALUS Convertible Sofa Bed</h3>
+                    <p>Living Room Couch Futon Chair, Adjustable Backrest Foldable Floor Sleeper for Small Room, Apartment, Guest Room.</p>
+                    <p><strong>$599.99</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="h2">Dining Table</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/dtable1.avif" alt="dtable1">
+                    <h3> 5- Piece Rectangular Marble Top Table</h3>
+                    <p>For a family that consists of five.</p>
+                    <p><strong>₱9,500.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/dtable2.jpg" alt="dtable2">
+                    <h3>Round conference table with 4 chair</h3>
+                    <p>Suitable for Kitchen Room, Dining Room, Living Room, Reception Room</p>
+                    <p><strong>₱12,000.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="/Furnishful/IMAGES/dtable3.webp" alt="dtable3">
+                    <h3>Modern Dinning Table</h3>
+                    <p>This elegant marble dining set features a sleek white tabletop with gold-accented legs and stylish cushioned chairs, adding sophistication and modern charm to any dining space.</p>
+                    <p><strong>₱15,500.00</strong></p>
+                    <a href="/Furnishful/HTML/thankyou.html"><button class="buy-button">BUY NOW!</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
